@@ -137,7 +137,7 @@ table thead, table tbody {
 
 table tr {
     position: relative;
-    display: block;
+    display: flex;
     width: 100%;
     padding-bottom: 22px;
 }
@@ -158,14 +158,21 @@ table tbody tr {
 }
 
 table td {
-    width: 25%;
+    flex: 1;
     color:#ACACAC;
     font-weight: 500;
 }
 
+table td:last-of-type {
+    flex: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-50%, 35%);
+}
+
 table th {
-    display: inline-block;
-    width: 24.05%;
+    flex: 1;
     font-weight: 500;
     color: #9EAAB4;
 }
@@ -288,4 +295,19 @@ table tbody td:first-child {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 830px) {
+    table tbody{
+        font-size: 10px;
+    }
+
+    table td:nth-of-type(2), table th:nth-of-type(2) {
+        display: none;
+    }
+
+    .user__list {
+        margin-top: 32px;
+    }
+    
 }
