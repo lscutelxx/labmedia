@@ -1,0 +1,16 @@
+.text {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.text--small {
+    font-size: 10px;
+}
+
+.text--big {
+    font-size: 24px;
+}
+
+.text--bold {
+    font-weight: 700;
+}

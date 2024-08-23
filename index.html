@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>USERLIST</title>
+</head>
+<body>
+    <main class="userlist">
+        <div class="container">
+            <header>
+                <h1 class="userlist__title text text--big text--bold">Список пользователей</h1>
+            </header>
+
+            <div class="userlist__filter filter">
+                <div class="filter__input">
+                    <label for="filter">
+                        <img src="./icon/search-icon.svg" alt="search-icon">
+                    </label>
+                    <input id="search" type="text" id="filter" placeholder="Поиск по имени или e-mail" class="filter__userinput text">
+                </div>  
+                <div id="clear" class="filter__clear">
+                    <button class="filter__clear-button text">
+                        <img src="./icon/clean.svg" alt="clean-icon">
+                        Очистить фильтр
+                    </button>
+                </div>
+            </div>
+
+            <div class="user__list list">
+                <div class="list__sort">
+                    <ul class="list__sort-list">
+                        <li class="list__sort-item text text--small">
+                            Сортировка:
+                        </li>
+                        <li class="list__sort-item text text--small">
+                            <a href="#" id="dateSort" class="list__sort-type">Дата регистрации</a>
+                        </li>
+                        <li class="list__sort-item text text--small">
+                            <a href="#" id="raitSort" class="list__sort-type">Рейтинг</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list__content">
+                    <table id="table" class="list__content-table">
+                        <thead class="text text--small">
+                            <tr>
+                                <th scope="col">Имя пользователя</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Дата регистрации</th>
+                                <th scope="col">Рейтинг</th>
+                            </tr>   
+                        </thead>
+                        <tbody class="text">
+                            <tr class="loader__container">
+                                <td class="loader"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="prev text">Назад</button>
+            <div class="page">1/5</div>
+            <button class="next text">Вперед</button>
+        </div>
+    </main>
+
+    <div class="modal">
+        <div class="modal__content">
+            <p class="modal__title text">Вы уверены, что хотите удалить пользователя?</p>
+            <div class="modal__btns">
+                <button class="modal__btn text modal__btn--confirm">Да</button>
+                <button class="modal__btn text modal__btn--cancel">Нет</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pagination"></div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
